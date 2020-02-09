@@ -1,6 +1,8 @@
 {
   "name": "miguo-matrix-front-end-ui",
-  "version": "0.1.0",
+  "version": "1.4.0",
+  "description": "Let the world see your value.",
+  "author": "何承翰 <hokaso@qq.com>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
