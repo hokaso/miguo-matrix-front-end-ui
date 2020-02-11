@@ -107,7 +107,9 @@ module.exports = {
         // 在webpack的名称字段中提供应用程序的标题，以便可以在index.html中对其进行访问以注入正确的标题。
         name: name,
         resolve: {
+            extensions: ['.js', '.vue', '.json'],
             alias: {
+                'vue$': 'vue/dist/vue.esm.js',
                 '@': resolve('src')
             }
         }
