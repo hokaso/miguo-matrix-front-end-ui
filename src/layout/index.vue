@@ -1,19 +1,20 @@
 <template>
   <div class="app-wrapper">
     <sidebar class="sidebar-container" />
-    <div class="main-container">
-      <app-main />
-    </div>
+    <app-main />
+    <end-part />
+
   </div>
 </template>
 
 <script>
-import { Sidebar, AppMain } from './components'
+import { AppMain,Sidebar,EndPart } from './components'
 export default {
   name: "Layout",
   components: {
     Sidebar,
-    AppMain
+    AppMain,
+    EndPart
   },
 }
 </script>
@@ -22,16 +23,6 @@ export default {
   @import "~@/styles/mixin.scss";
   @import "~@/styles/variables.scss";
 
-  .app-wrapper {
-    @include clearfix;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    &.mobile.openSidebar{
-      position: fixed;
-      top: 0;
-    }
-  }
   .drawer-bg {
     background: #000;
     opacity: 0.3;

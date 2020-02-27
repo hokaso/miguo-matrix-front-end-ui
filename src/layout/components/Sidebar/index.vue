@@ -1,16 +1,22 @@
 <template>
-  <el-menu
-    :default-active="activeIndex"
-    class="el-menu-demo"
-    mode="horizontal"
-  >
-    <head-nav v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
-  </el-menu>
+  <div>
+    <el-menu
+      :default-active="activeIndex"
+      :background-color="variables.menuBg"
+      :text-color="variables.menuText"
+      :active-text-color="variables.menuActiveText"
+      mode="horizontal"
+    >
+      <img class="logo" src="@/assets/web_logo.png"  alt=""/>
+      <head-nav v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
+    </el-menu>
+  </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
   import HeadNav from './HeadNav'
+  import variables from '@/styles/variables.scss'
   export default {
     components: { HeadNav },
     computed: {
@@ -25,6 +31,9 @@
           return meta.activeMenu
         }
         return path
+      },
+      variables() {
+        return variables
       },
     }
   }

@@ -16,6 +16,7 @@ const name = defaultSettings.title || '广东米果传媒有限公司' // page t
  * @type {string | number}
  */
 const port = process.env.port || process.env.npm_config_port || 8099 // dev port
+const back_port = 9090
 
 module.exports = {
     /**
@@ -124,6 +125,7 @@ module.exports = {
     pwa: {},
     // webpack-dev-server 相关配置
     devServer: {
+      disableHostCheck: true,
         open: true,
         overlay: {
             warnings: false,
@@ -132,7 +134,16 @@ module.exports = {
         port: port,
         host: '0.0.0.0',
         hot: true,
-        proxy: null, // 设置代理
+        proxy: {
+          "/api": {
+            target: process.env.VUE_APP_API,
+            changeOrigin: true,
+            ws: true,
+            // pathRewrite: {
+            //   "/api": ''
+            // }
+          }
+        }
     },
     // 第三方插件配置
     pluginOptions: {
