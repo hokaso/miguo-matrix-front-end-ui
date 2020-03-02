@@ -19,7 +19,7 @@
       </el-col>
       <el-col :span="4" :offset="1">
         <div class="block-title">
-          推荐文章
+          推荐视频
         </div>
         <el-row v-for="item in list" class="abbr_article_single" :key="item.id">
           <router-link :to="'/video/'+item.id">
@@ -152,7 +152,7 @@
     font-size: 0;
   }
   .abbr_article_word{
-    width: 230px;
+    width: 250px;
     line-height: 16px;
     display: inline-block;
     font-size: 12px;
@@ -176,7 +176,7 @@
   }
   .abbr_article_img{
     display: inline-block;
-    width: 68px;
+    /*width: 68px;*/
     height: 50px;
     border-radius: 4px;
     overflow: hidden;
