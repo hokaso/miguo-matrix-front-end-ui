@@ -11,8 +11,20 @@ import router from './router'
 
 import '@/icons' // 图标
 
+import getPageTitle from '@/utils/get-page-title'
+// import 'lib-flexible'
+// import '@/utils/rem'
+
 Vue.use(ElementUI)
 Vue.config.productionTip = false
+
+router.beforeEach(async(to, from, next) => {
+
+  document.title = getPageTitle(to.meta.title)
+
+  next()
+
+})
 
 new Vue({
   el: '#app',

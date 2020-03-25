@@ -67,7 +67,7 @@ export const constantRoutes = [
         path: ':id(\\d+)',
         name: 'web_video_detail',
         component: () => import('@/views/video/detail'),
-        meta: { title: '文章详情', noCache: true, activeMenu: '/video/index', icon: 'video' },
+        meta: { title: '视频详情', noCache: true, activeMenu: '/video/index', icon: 'video' },
         hidden: true
       }
     ]
