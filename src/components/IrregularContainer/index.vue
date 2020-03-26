@@ -231,7 +231,7 @@
   }
   .articleC2{
     width: 100%;
-    height: 426px;
+    height: 370px;
     box-shadow: 0 0 14px #e4e2e2;
     -webkit-box-shadow: 0 0 14px #e4e2e2;
   }
