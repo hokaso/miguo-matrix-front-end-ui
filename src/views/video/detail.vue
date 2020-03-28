@@ -58,7 +58,7 @@
     </div>
     <div v-else>
       <div>
-        <img src="../../assets/article_fill.jpg" alt="" class="full" />
+        <img src="../../assets/article_fill.jpg" alt="" class="full_a" />
       </div>
       <div class="card">
         <el-card
@@ -74,7 +74,7 @@
             >
           </div>
           <div style="text-align: center;margin: 38px 0 16px; ">
-            <div style="position: relative; padding: 30% 45%;">
+            <div style="position: relative; padding: 28.25% 45%;">
               <iframe
                 :src="videoProfileTemp"
                 scrolling="no"
@@ -106,20 +106,20 @@
             :gutter="24"
           >
             <router-link :to="'/video/' + item.id">
-              <el-col :span="17">
-                <div>
+              <el-col :span="17" style="padding-left: 18px;">
+                <div style="display: inline-block;">
                   <div class="video_title">
                     {{ item.videoTitle }}
                   </div>
                   <div class="abbr_article_info">
                     <span>{{ item.createAt }}</span>
-                    <span style="padding-left: 8px"
-                      >&emsp; 作者：{{ item.videoAuthor }}</span
+                    <br />
+                    <span>作者：{{ item.videoAuthor }}</span
                     >
                   </div>
                 </div>
               </el-col>
-              <el-col :span="7">
+              <el-col :span="7" style="padding-left: 24px;">
                 <img alt="" :src="item.videoPic" class="t_img" />
               </el-col>
             </router-link>
@@ -203,7 +203,7 @@ export default {
   .video_info {
     font-size: 16px;
     color: #656565;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
   .card {
     padding: 16px;
@@ -217,7 +217,14 @@ export default {
       padding-bottom: 10px;
     }
     .t_img {
-      width: 100%;
+      display: inline-block;
+      height: 74px;
+      border-radius: 4px;
+      overflow: hidden;
+      vertical-align: middle;
+      background-size: cover;
+      background-position: 50%;
+      background-repeat: no-repeat;
     }
   }
   .abbr_article_word {
@@ -230,11 +237,20 @@ export default {
     font-size: 12px;
     color: #222;
     line-height: 1.5;
+    max-height: 32px;
+    overflow: hidden;
   }
-  .full {
+  .abbr_article_info{
+    margin-top: 8px !important;
+    margin-left: 2px;
+    line-height: 1.5;
+  }
+  .full_a {
     width: 100%;
+    padding: 0.5rem 0.5rem 0 0.5rem;
   }
 }
+
 .main_container {
   margin-top: 40px;
 }

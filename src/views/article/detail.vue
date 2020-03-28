@@ -164,7 +164,7 @@ export default {
       padding: 10px;
       .article,
       .article_contain {
-        padding: 0 10px 0;
+        padding: 0 10px 1px;
       }
       .card_body {
         margin-bottom: 16px;
@@ -195,6 +195,7 @@ export default {
 
     .full {
       width: 100%;
+      padding: 0.5rem 0.5rem 0 0.5rem;
     }
     .abbr_article_img{
       margin-left: 16px;

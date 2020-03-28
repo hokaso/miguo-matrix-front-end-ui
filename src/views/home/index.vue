@@ -4,7 +4,7 @@
     <recommend />
     <grid-switch />
     <irregular-container />
-    <div class="dashboard-container"></div>
+<!--    <div class="dashboard-container"></div>-->
   </div>
 </template>
 

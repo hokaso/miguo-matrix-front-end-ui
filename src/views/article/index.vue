@@ -213,8 +213,8 @@ export default {
     .article_container {
       width: 900px;
     }
-    
-    
+
+
   }
 
   @media screen and (max-width: 768px) {
@@ -236,8 +236,8 @@ export default {
         margin-bottom: 16px;
       }
       .article_title {
-        margin-top: 20px;
-        margin-bottom: 10px;
+        margin-top: 0.6rem;
+        margin-bottom: 0.3rem;
         width: 100%;
         line-height: 24px;
         font-size: 18px;
@@ -247,7 +247,8 @@ export default {
       .article_info {
         font-size: 12px;
         color: #a2a2a2;
-        text-align: center;
+        /*text-align: center;*/
+        margin-left: 0.3rem;
       }
     }
     .search {

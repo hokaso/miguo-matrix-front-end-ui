@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row v-if="!isMobile" type="flex" justify="center">
+    <el-row v-if="!isMobile" type="flex" justify="center" style="margin-bottom: 80px;">
       <el-col v-if="listTemp" :span="7" class="articleL">
         <el-row class="articleL1">
           <router-link :to="'/article/' + listTemp[0][0].id">
@@ -354,9 +354,9 @@ export default {
 @media screen and (max-width: 768px) {
   .card {
     padding: 16px;
-    .article,
-    .article_contain {
+    .article, .article_contain {
       padding: 0 10px 0;
+      margin-top: 0 !important;
     }
     .article_contain{
       font-size: 15px;

@@ -16,7 +16,7 @@
             </div>
           </el-col>
           <el-col :sm="24" :md="16">
-            <div style="position: relative; padding: 30% 45%;">
+            <div style="position: relative; padding: 28.25% 45%;">
               <iframe
                 :src="videoUrl"
                 scrolling="no"

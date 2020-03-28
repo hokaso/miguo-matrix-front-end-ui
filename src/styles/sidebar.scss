@@ -221,6 +221,7 @@
 @media screen and (max-width: 768px) {
   .logo {
     margin: 0 !important;
+    padding-left: 19px;
   }
   .menu-wrapper {
     .el-menu-item {
@@ -233,5 +234,12 @@
   .full-height{
     height: 100%
   }
-  
+  .svg-icon {
+    margin-right: 6px !important;
+  }
+  .submenu-title {
+    float: left;
+    padding-right: 7px !important;
+  }
+
 }

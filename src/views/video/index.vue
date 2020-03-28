@@ -38,7 +38,7 @@
           <router-link :to="'/video/' + cell.id">
             <el-card :body-style="{ padding: '0px' }">
               <img :src="cell.videoPic" class="image" alt="" />
-              <div class="video_title">
+              <div class="video_title_a">
                 <span>{{ cell.videoTitle }}</span>
                 <div class="bottom clearfix">
                   <!--                <span class="info">{{ cell.videoProfile }}</span>-->
@@ -75,7 +75,7 @@
           搜索
         </el-button>
       </div>
-      <el-row :gutter="24" style="margin-top: 16px;padding: 16px;">
+      <el-row :gutter="24" style="margin-top: 16px;padding: 16px; margin-bottom: -50px;">
         <el-col
           v-for="(item, idx) in list"
           :key="idx"
@@ -84,7 +84,7 @@
         >
           <el-card :body-style="{ padding: '0px' }" @click.native="$router.push(`/video/${item.id}`)">
             <img :src="item.videoPic" style="width: 100%;" alt="" />
-            <div class="video_title">
+            <div class="video_title_a">
               <span>{{ item.videoTitle }}</span>
             </div>
           </el-card>
@@ -211,7 +211,7 @@ export default {
     .full {
       width: 100%;
     }
-    .video_title {
+    .video_title_a {
       padding: 12px;
       font-size: 14px;
       line-height: 1.2;
@@ -231,7 +231,7 @@ export default {
       margin-top: 13px;
       line-height: 12px;
     }
-    .video_title {
+    .video_title_a {
       padding: 16px;
       font-size: 16px;
       line-height: 23px;
