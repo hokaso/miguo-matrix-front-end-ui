@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row type="flex" justify="center">
-      <el-col :span="8">
+      <el-col :md="8" :sm="24">
         <div class="intro">
           <h3>关于我们</h3>
           <div class="con2 contact2">
@@ -61,7 +61,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .intro{
     margin-top: 50px;
   }
@@ -96,8 +96,9 @@
   .img_com {
     /*width: 60%;*/
     /*margin: 0 20%;*/
-    overflow: hidden;
+    // overflow: hidden;
     margin-top: 30px;
+    flex-wrap: wrap;
   }
   .img_com img{
     width:150px;

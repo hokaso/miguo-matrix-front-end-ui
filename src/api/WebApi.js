@@ -31,5 +31,10 @@ export default {
       res => res.data
     )
   },
+  getBilibili (id) {
+    return HttpKit.get(`/bilibili?aid=${id}&cid=21890669&page=1&high_quality=1&danmaku=0`).then(
+      res => res
+    )
+  }
 
 }

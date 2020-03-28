@@ -1,5 +1,6 @@
 const state = {
     device: 'desktop',
+    isMobile: document.body.clientWidth <= 768? true: false
 }
 
 const mutations = {

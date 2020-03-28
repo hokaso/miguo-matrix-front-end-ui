@@ -10,11 +10,16 @@ import store from './store'
 import router from './router'
 
 import '@/icons' // 图标
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+// import style
+import 'swiper/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper)
 import getPageTitle from '@/utils/get-page-title'
 // import 'lib-flexible'
 // import '@/utils/rem'
-
+import 'lib-flexible/flexible'
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 

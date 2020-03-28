@@ -1,6 +1,7 @@
 <template>
   <div>
-    <swiper />
+    <my-swiper />
+    <recommend />
     <grid-switch />
     <irregular-container />
     <div class="dashboard-container"></div>
@@ -8,11 +9,12 @@
 </template>
 
 <script>
-  import Swiper from "@/components/Swiper";
+  import MySwiper from "@/components/Swiper";
   import GridSwitch from "@/components/GridSwitch";
   import IrregularContainer from "@/components/IrregularContainer";
+   import Recommend from '@/components/Recommend'
   export default {
-    components: { Swiper, GridSwitch,IrregularContainer },
+    components: { MySwiper, GridSwitch,IrregularContainer,Recommend },
     data () {
       return {
         name: '123'
