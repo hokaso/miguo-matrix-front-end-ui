@@ -6,7 +6,7 @@
       </div>
       <el-row :gutter="20">
         <el-col :span="9" :offset="5" class="main_container">
-          <h1 class="main_title">{{ temp.title }}</h1>
+          <h1 class="main_title_c">{{ temp.title }}</h1>
           <div class="article_info">
             <span>{{ temp.createAt }}</span>
             <span style="padding-left: 8px"
@@ -48,7 +48,7 @@
       </div>
       <div class="card">
         <el-card shadow="never" style="margin-bottom: 16px;padding: 10px;">
-          <h1 class="main_title">{{ temp.title }}</h1>
+          <h1 class="main_title_c">{{ temp.title }}</h1>
           <div class="article_info">
             <span>{{ temp.createAt }}</span>
             <span style="padding-left: 8px"
@@ -170,16 +170,25 @@ export default {
         margin-bottom: 16px;
       }
     }
+    .abbr_article_word{
+      width: 5.5rem !important;
+    }
     .article_detail {
       padding-bottom: 0 !important;
       section {
         img {
-          width: 100%;
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
       p {
         img {
-          width: 100%;
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
     }
@@ -198,18 +207,15 @@ export default {
       padding: 0.5rem 0.5rem 0 0.5rem;
     }
     .abbr_article_img{
-      margin-left: 16px;
+      /*margin-left: 16px;*/
     }
   }
 
   .main_container {
     margin-top: 60px;
   }
-  .main_title {
+  .main_title_c {
     width: 100%;
-    height: 30px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 22px;
     font-weight: bold;
     line-height: 30px;
@@ -285,7 +291,7 @@ export default {
   }
   .abbr_article_img {
     display: inline-block;
-    width: 68px;
+    /*width: 68px;*/
     height: 50px;
     border-radius: 4px;
     // margin-left: 16px;

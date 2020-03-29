@@ -80,7 +80,7 @@
           v-for="(item, idx) in list"
           :key="idx"
           :span="12"
-          style="minHeight: 330px;"
+          style="min-height: 9rem;"
         >
           <el-card :body-style="{ padding: '0px' }" @click.native="$router.push(`/video/${item.id}`)">
             <img :src="item.videoPic" style="width: 100%;" alt="" />

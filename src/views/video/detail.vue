@@ -108,7 +108,7 @@
             <router-link :to="'/video/' + item.id">
               <el-col :span="17" style="padding-left: 18px;">
                 <div style="display: inline-block;">
-                  <div class="video_title">
+                  <div class="video_title_c">
                     {{ item.videoTitle }}
                   </div>
                   <div class="abbr_article_info">
@@ -233,7 +233,7 @@ export default {
   .abbr_article_single {
     width: 100%;
   }
-  .video_title {
+  .video_title_c {
     font-size: 12px;
     color: #222;
     line-height: 1.5;
