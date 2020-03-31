@@ -1,64 +1,55 @@
 <template>
   <div>
     <div v-if="!isMobile">
-      <div class="banner">
-        <img src="../../assets/article_fill.jpg" alt="" />
-      </div>
-      <el-row :gutter="20">
-        <el-col :span="10" style="margin-left: 360px" class="main_container">
-          <h1 class="main_title">{{ temp.videoTitle }}</h1>
-          <div class="article_info">
-            <span>{{ temp.createAt }}</span>
-            <span style="padding-left: 8px"
-              >&emsp; 作者：{{ temp.videoAuthor }}</span
-            >
-          </div>
-          <div class="video_detail">
-            <iframe
-              :src="videoProfileTemp"
-              scrolling="no"
-              border="0"
-              frameborder="no"
-              framespacing="0"
-              width="800px"
-              height="500px"
-              allowfullscreen="true"
-              sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
-            >
-            </iframe>
-          </div>
-          <div class="video_info">视频简介：{{ temp.videoProfile }}</div>
+      <el-row>
+        <el-col :span="24" :offset="2" class="banner">
+          <img src="../../assets/article_fill.jpg" style="margin:0 auto" alt />
         </el-col>
-        <el-col :span="4" :offset="1">
-          <div class="block-title">
-            推荐视频
-          </div>
-          <el-row
-            v-for="item in list"
-            class="abbr_article_single"
-            :key="item.id"
-          >
-            <router-link :to="'/video/' + item.id">
-              <div class="abbr_article_word">
-                <div class="abbr_article_title">
-                  {{ item.videoTitle }}
+      </el-row>
+      <el-row :gutter="20" class="container_wrap">
+        <div style="min-width:1400px">
+          <el-col :offset="2" :span="20" style="display:inline-block;" class="main_container">
+            <h1 class="main_title">{{ temp.videoTitle }}</h1>
+            <div class="article_info">
+              <span>{{ temp.createAt }}</span>
+              <span style="padding-left: 8px">&emsp; 作者：{{ temp.videoAuthor }}</span>
+            </div>
+            <div class="video_detail">
+              <iframe
+                :src="videoProfileTemp"
+                scrolling="no"
+                border="0"
+                frameborder="no"
+                framespacing="0"
+                width="800px"
+                height="500px"
+                allowfullscreen="true"
+                sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
+              ></iframe>
+            </div>
+            <div class="video_info">视频简介：{{ temp.videoProfile }}</div>
+          </el-col>
+          <el-col :span="4" :offset="1" style="display:inline-block;">
+            <div class="block-title">推荐视频</div>
+            <el-row v-for="item in list" class="abbr_article_single" :key="item.id">
+              <router-link :to="'/video/' + item.id">
+                <div class="abbr_article_word">
+                  <div class="abbr_article_title">{{ item.videoTitle }}</div>
+                  <div class="abbr_article_info">
+                    <span>{{ item.createAt }}</span>
+                    <span style="padding-left: 8px">&emsp; 作者：{{ item.videoAuthor }}</span>
+                  </div>
                 </div>
-                <div class="abbr_article_info">
-                  <span>{{ item.createAt }}</span>
-                  <span style="padding-left: 8px"
-                    >&emsp; 作者：{{ item.videoAuthor }}</span
-                  >
-                </div>
-              </div>
-              <img alt="" :src="item.videoPic" class="abbr_article_img" />
-            </router-link>
-          </el-row>
-        </el-col>
+                <img alt :src="item.videoPic" class="abbr_article_img" />
+              </router-link>
+            </el-row>
+          </el-col>
+        </div>
       </el-row>
     </div>
     <div v-else>
       <div>
-        <img src="../../assets/article_fill.jpg" alt="" class="full_a" />
+        <img src="../../assets/article_fill.jpg" alt class="full_a" />
       </div>
       <div class="card">
         <el-card
@@ -69,9 +60,7 @@
           <h1 class="main_title">{{ temp.videoTitle }}</h1>
           <div class="article_info">
             <span>{{ temp.createAt }}</span>
-            <span style="padding-left: 8px"
-              >&emsp; 作者：{{ temp.videoAuthor }}</span
-            >
+            <span style="padding-left: 8px">&emsp; 作者：{{ temp.videoAuthor }}</span>
           </div>
           <div style="text-align: center;margin: 38px 0 16px; ">
             <div style="position: relative; padding: 28.25% 45%;">
@@ -84,8 +73,7 @@
                 allowfullscreen="true"
                 sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
                 style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"
-              >
-              </iframe>
+              ></iframe>
             </div>
           </div>
           <div class="video_info">视频简介：{{ temp.videoProfile }}</div>
@@ -96,9 +84,7 @@
           class="t"
           :body-style="{ padding: '10px' }"
         >
-          <div class="t_title">
-            推荐视频
-          </div>
+          <div class="t_title">推荐视频</div>
           <el-row
             v-for="item in list"
             style="width: 100%;margin-top: 16px;"
@@ -108,19 +94,16 @@
             <router-link :to="'/video/' + item.id">
               <el-col :span="17" style="padding-left: 18px;">
                 <div style="display: inline-block;">
-                  <div class="video_title_c">
-                    {{ item.videoTitle }}
-                  </div>
+                  <div class="video_title_c">{{ item.videoTitle }}</div>
                   <div class="abbr_article_info">
                     <span>{{ item.createAt }}</span>
                     <br />
-                    <span>作者：{{ item.videoAuthor }}</span
-                    >
+                    <span>作者：{{ item.videoAuthor }}</span>
                   </div>
                 </div>
               </el-col>
               <el-col :span="7" style="padding-left: 24px;">
-                <img alt="" :src="item.videoPic" class="t_img" />
+                <img alt :src="item.videoPic" class="t_img" />
               </el-col>
             </router-link>
           </el-row>
@@ -240,7 +223,7 @@ export default {
     max-height: 32px;
     overflow: hidden;
   }
-  .abbr_article_info{
+  .abbr_article_info {
     margin-top: 8px !important;
     margin-left: 2px;
     line-height: 1.5;
@@ -251,7 +234,22 @@ export default {
   }
 }
 
+.container_wrap {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: scroll; /* 1 */
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-overflow-scrolling: touch; /* 2 */
+  text-align: justify; /* 3 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 .main_container {
+  width: 800px;
+  min-width: 820px;
   margin-top: 40px;
 }
 .main_title {
@@ -267,7 +265,6 @@ export default {
 }
 .banner {
   display: block;
-  margin: 60px auto 0;
   border-radius: 0.6rem;
   width: 1200px;
   height: 150px;
@@ -340,6 +337,7 @@ export default {
   background-repeat: no-repeat;
 }
 .video_info {
+  white-space: normal;
   font-size: 16px;
   /*color: #99a2aa;*/
   letter-spacing: 0;
