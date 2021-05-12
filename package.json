@@ -19,7 +19,7 @@
     "npm": "^6.14.6",
     "postcss-px2rem": "^0.3.0",
     "postcss-pxtorem": "^5.1.1",
-    "swiper": "^5.3.6",
+    "swiper": "^6.5.1",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.0.4",
     "vue-router": "latest",
